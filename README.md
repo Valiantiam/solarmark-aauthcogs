@@ -1,4 +1,4 @@
-# solarmark-aauthcog
+# solarmark-aauthcogs
 AAuth Cogs for Solarmark
 
 > **Warning** <br>
