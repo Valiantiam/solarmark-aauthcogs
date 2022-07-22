@@ -14,10 +14,10 @@ from discord.ext import commands
 from django.conf import settings
 
 
-# Validation Checks - THREAD_CHANID and THREAD_MSG must be defined in server settings
-if not hasattr(settings, "THREAD_CHANID"):
+# Validation Checks - SOLARMARK_THREAD_CHANID and SOLARMARK_THREAD_MSG must be defined in server settings
+if not hasattr(settings, "SOLARMARK_THREAD_CHANID"):
     raise ValueError("Thread Channel is not defined")
-if not hasattr(settings, "THREAD_MSG"):
+if not hasattr(settings, "SOLARMARK_THREAD_MSG"):
     raise ValueError("Thread Message is not defined")
 
 class Thread(commands.Cog):
@@ -30,9 +30,9 @@ class Thread(commands.Cog):
 		
 	@commands.user_command(name="Recruit for EVE")
 	async def recruit(self, ctx, member: commands.Member):
-		channel = commands.get_channel(settings.THREAD_CHANID)
+		channel = commands.get_channel(settings.SOLARMARK_THREAD_CHANID)
 		threadname = "RCT-" + member.name
-		messagetext = settings.THREAD_MSG.format(member.name)
+		messagetext = settings.SOLARMARK_THREAD_MSG.format(member.name)
 		await channel.create_thread(name=threadname, message=messagetext, auto_archive_duration=10080, type=private_thread, reason=None)
 
 
