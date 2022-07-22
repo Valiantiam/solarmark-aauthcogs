@@ -14,11 +14,13 @@ from discord.ext import commands
 from django.conf import settings
 
 
-# Validation Checks
+# Validation Checks - THREAD_CHANID and THREAD_MSG must be defined in server settings
 if not hasattr(settings, "THREAD_CHANID"):
     raise ValueError("Thread Channel is not defined")
+if not hasattr(settings, "THREAD_MSG"):
+    raise ValueError("Thread Message is not defined")
 
-class Thread(commands.Cog)
+class Thread(commands.Cog):
 	"""
 	Creates private thread for recruits.
 	"""
@@ -26,12 +28,12 @@ class Thread(commands.Cog)
 	def __init__(self, bot):
 		self.bot = bot
 		
-	@discord.user_command(name="Recruit for EVE")
-	async def thread(self, ctx, member: discord.Member)
-	
-	channel = bot.get_channel(settings.THREAD_CHANID) # define this!
-	await channel.create_thread(name="RCT-{member.name}", message={@}, auto_archive_duration=4320, type=private_thread, reason=None)
-	await 
+	@commands.user_command(name="Recruit for EVE")
+	async def recruit(self, ctx, member: commands.Member):
+		channel = commands.get_channel(settings.THREAD_CHANID)
+		threadname = "RCT-" + member.name
+		messagetext = settings.THREAD_MSG.format(member.name)
+		await channel.create_thread(name=threadname, message=messagetext, auto_archive_duration=10080, type=private_thread, reason=None)
 
 
 def setup(bot):
