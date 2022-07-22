@@ -17,7 +17,7 @@ Cog |  Purpose
 
 1. Add `git+https://github.com/Valiantiam/solarmark-aauthcog.git` to your requirements.txt
 2. Configure your AA settings (`local.py`) as follows:
-    - Add `'solarmark-aauthcog',` to 'INSTALLED_APPS'
+    - Add `'solarmark_aauthcog',` to 'INSTALLED_APPS'
     - All below settings:
     
 ## Settings
