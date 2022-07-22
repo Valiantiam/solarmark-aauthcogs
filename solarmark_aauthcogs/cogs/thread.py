@@ -18,7 +18,7 @@ if not hasattr(settings, "SOLARMARK_THREAD_CHANID"):
 if not hasattr(settings, "SOLARMARK_THREAD_MSG"):
     raise ValueError("Thread Message is not defined")
 
-class Thread(commands.Cog):
+class Recruit(commands.Cog):
 	"""
 	Creates private thread for recruits.
 	"""
@@ -27,7 +27,7 @@ class Thread(commands.Cog):
 		self.bot = bot
 		
 
-	@commands.user_command(name="Recruit for EVE")
+	@discord.user_command(name="Recruit for EVE")
 	async def recruit(self, ctx, member: commands.Member):
 		channel = commands.get_channel(settings.SOLARMARK_THREAD_CHANID)
 		threadname = "RCT-" + member.name
@@ -40,4 +40,4 @@ def setup(bot):
     Setup the cog
     :param bot:
     """
-    bot.add_cog(Thread(bot))
+    bot.add_cog(Recruit(bot))
