@@ -14,5 +14,5 @@ if allianceauth_discordbot_active():
         """
 
         return [
-            "solarmark-aauthcog.cogs.thread",
+            "solarmark_aauthcogs.cogs.thread",
         ]
