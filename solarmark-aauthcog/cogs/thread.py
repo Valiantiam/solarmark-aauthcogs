@@ -26,8 +26,18 @@ class Thread(commands.Cog)
 	def __init__(self, bot):
 		self.bot = bot
 		
-	@commands.user_command(name="Create Recruit Thread"
-	async def thread(self, ctx, member: disrod.Member)
+	@discord.user_command(name="Recruit for EVE")
+	async def thread(self, ctx, member: discord.Member)
 	
-	channel = bot.get_channel(600408850658623498) # define this!
-	await channel.create_thread(name="RCT-{member.name}", message=None, auto_archive_duration=4320, type=private_thread, reason=None)
+	channel = bot.get_channel(settings.THREAD_CHANID) # define this!
+	await channel.create_thread(name="RCT-{member.name}", message={@}, auto_archive_duration=4320, type=private_thread, reason=None)
+	await 
+
+
+def setup(bot):
+    """
+    Setup the cog
+    :param bot:
+    """
+
+    bot.add_cog(Thread(bot))
