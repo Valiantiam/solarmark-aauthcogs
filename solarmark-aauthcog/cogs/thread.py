@@ -3,14 +3,12 @@ Recruitment Thread cog for aa-discordbot - https://github.com/pvyParts/alliancea
 
 Creates a private thread for recruiters and recruits in your discord to manage recruitment of new members.
 """
-
-# Standard Library
+# Cog Stuff
 import logging
-
-# Third Party
+import discord
 from discord.ext import commands
 
-# Django
+# AA Contexts
 from django.conf import settings
 
 
@@ -28,18 +26,18 @@ class Thread(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 		
+
 	@commands.user_command(name="Recruit for EVE")
 	async def recruit(self, ctx, member: commands.Member):
 		channel = commands.get_channel(settings.SOLARMARK_THREAD_CHANID)
 		threadname = "RCT-" + member.name
 		messagetext = settings.SOLARMARK_THREAD_MSG.format(member.name)
 		await channel.create_thread(name=threadname, message=messagetext, auto_archive_duration=10080, type=private_thread, reason=None)
-
-
+	
+	
 def setup(bot):
     """
     Setup the cog
     :param bot:
     """
-
     bot.add_cog(Thread(bot))
