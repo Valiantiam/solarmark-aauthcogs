@@ -3,14 +3,12 @@ Recruitment Thread cog for aa-discordbot - https://github.com/pvyParts/alliancea
 
 Creates a private thread for recruiters and recruits in your discord to manage recruitment of new members.
 """
-
-# Standard Library
+# Cog Stuff
 import logging
-
-# Third Party
+import discord
 from discord.ext import commands
 
-# Django
+# AA Contexts
 from django.conf import settings
 
 
@@ -31,13 +29,12 @@ class Thread(commands.Cog)
 	
 	channel = bot.get_channel(settings.THREAD_CHANID) # define this!
 	await channel.create_thread(name="RCT-{member.name}", message={@}, auto_archive_duration=4320, type=private_thread, reason=None)
-	await 
 
-
+	
+	
 def setup(bot):
     """
     Setup the cog
     :param bot:
     """
-
     bot.add_cog(Thread(bot))
