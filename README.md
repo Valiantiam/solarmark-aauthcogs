@@ -2,7 +2,7 @@
 AAuth Cogs for Solarmark
 
 > **Warning** <br>
-> This is built for Solarmark specifically. It is not guaranteed to work in any environment other than our own, and may have hard-coded values for some settings depending on our needs. Additionally, this app is in constant steady development and may often not be in a working state. **If you aren't us, you probably shouldn't use this.**
+> This is built for Solarmark specifically. It is not guaranteed to work in any environment other than our own, and may have hard-coded values for some settings depending on our needs. Additionally, this app is in constant unpredictable development and may often not be in a working state. **If you aren't us, you probably shouldn't use this.**
 
 ## How to Install
 *(Assumes a docker environment and does not use correct standards for installing. Reall you/me should publish this to pypi.)*
