@@ -13,7 +13,7 @@ Cog |  Purpose
 `thread.py` | Add a context menu for recruiters to right click on a user and createa private recruitment thread.
 
 ## How to Install
-*(Assumes a docker environment and does not use correct standards for installing. Reall you/me should publish this to pypi.)*
+*(Assumes a docker environment and does not use correct standards for installing. Really you/me should publish this to pypi.)*
 
 1. Add `git+https://github.com/Valiantiam/solarmark-aauthcog.git` to your requirements.txt
 2. Configure your AA settings (`local.py`) as follows:
