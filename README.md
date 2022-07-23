@@ -23,4 +23,4 @@ Cog |  Purpose
 ## Settings
 Setting | Default | Description
 --- | --- | ---
-`SOLARMARK_AAUTHCOG_THREAD_CHANID` | ` ` | ID of the channel you want threads created in.
+`SOLARMARK_THREAD_CHANID` | ` ` | ID of the channel you want threads created in.
