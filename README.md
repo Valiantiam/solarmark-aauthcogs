@@ -1,4 +1,4 @@
-# solarmark-aauthcog
+# solarmark-aauthcogs
 AAuth Cogs for Solarmark
 
 > **Warning** <br>
@@ -15,9 +15,9 @@ Cog |  Purpose
 ## How to Install
 *(Assumes a docker environment and does not use correct standards for installing. Really you/me should publish this to pypi.)*
 
-1. Add `git+https://github.com/Valiantiam/solarmark-aauthcog.git` to your requirements.txt
+1. Add `git+https://github.com/Valiantiam/solarmark-aauthcogs.git` to your requirements.txt
 2. Configure your AA settings (`local.py`) as follows:
-    - Add `'solarmark_aauthcog',` to 'INSTALLED_APPS'
+    - Add `'solarmark_aauthcogs',` to 'INSTALLED_APPS'
     - All below settings:
     
 ## Settings
