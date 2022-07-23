@@ -25,9 +25,13 @@ class Thread(commands.Cog):
 	
 	def __init__(self, bot):
 		self.bot = bot
-		
 
+	async def is_corp_member(ctx):
+		for userrole in ctx.author.roles:
+		return ctx.author.roles 
+		
 	@commands.user_command(name="Recruit for EVE")
+	@commands.check(is_corp_member)
 	async def recruit(self, ctx, member: commands.Member):
 		channel = commands.get_channel(settings.SOLARMARK_THREAD_CHANID)
 		threadname = "RCT-" + member.name
