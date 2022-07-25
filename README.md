@@ -23,4 +23,6 @@ Cog |  Purpose
 ## Settings
 Setting | Default | Description
 --- | --- | ---
-`SOLARMARK_THREAD_CHANID` | ` ` | ID of the channel you want threads created in.
+`SOLARMARK_RECRUIT_CHANID` | ` ` | ID of the channel you want threads created in.
+`SOLARMARK_RECRUIT_ROLEID` | ` ` | ID of the discord role you want to allow to use the command.
+`SOLARMARK_RECRUIT_MSG` | ` ` | The Message that is posted to the thread on creation.
