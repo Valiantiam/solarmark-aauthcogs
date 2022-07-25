@@ -13,14 +13,16 @@ from discord.ext import commands
 from django.conf import settings
 
 # Validation Checks - These values must be defined in server settings
-#if not hasattr(settings, "SOLARMARK_RECRUIT_CHANID"):
-#    raise ValueError("Recruitment base channel is not defined")
-#if not hasattr(settings, "SOLARMARK_RECRUIT_MSG"):
-#    raise ValueError("Recruitment message is not defined")
-#if not hasattr(settings, "SOLARMARK_CORP_ROLEID"):
-#    raise ValueError("Recruitment role ID is not defined")
-#if not hasattr(settings, "SOLARMARK_RECRUITER_ROLEID"):
-
+'''
+if not hasattr(settings, "SOLARMARK_RECRUIT_CHANID"):
+    raise ValueError("Recruitment base channel is not defined")
+if not hasattr(settings, "SOLARMARK_RECRUIT_MSG"):
+    raise ValueError("Recruitment message is not defined")
+if not hasattr(settings, "SOLARMARK_CORP_ROLEID"):
+    raise ValueError("Recruitment role ID is not defined")
+if not hasattr(settings, "SOLARMARK_RECRUITER_ROLEID"):
+	raise ValueError("Recruitment role ID is not defined")
+'''
 
 class Recruit(commands.Cog):
 	"""
@@ -38,7 +40,7 @@ class Recruit(commands.Cog):
 
 	async def caller_authorized(self, ctx):
 		for userrole in ctx.author.roles:
-			if userrole.id == 998839417093488654:
+			if userrole.id == settings.SOLARMARK_RECRUITER_ROLEID:
 				return True
 		return False
 
