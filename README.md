@@ -25,6 +25,7 @@ Cog |  Purpose
 ## Settings
 Setting | Default | Description
 --- | --- | ---
-`SOLARMARK_RECRUIT_CHANID` | ` ` | ID of the channel you want threads created in.
-`SOLARMARK_RECRUIT_ROLEID` | ` ` | ID of the discord role you want to allow to use the command.
-`SOLARMARK_RECRUIT_MSG` | ` ` | The Message that is posted to the thread on creation.
+`SOLARMARK_RECRUIT_CHANID` | ` ` | ID of the channel you want the threads created in.
+`SOLARMARK_CORP_ROLEID` | ` ` | List of roles you don't want recruited (such as those already in corp)
+`SOLARMARK_RECRUIT_MSG` | ` ` | The Message that is posted to the thread on creation. (Also handles who is invited to the thread through the use of @mentions)
+`SOLARMARK_RECRUITER_ROLEID` | ` ` | Role(s) you want to be able to use the recruit action.
