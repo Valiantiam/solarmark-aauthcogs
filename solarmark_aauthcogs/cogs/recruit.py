@@ -38,7 +38,7 @@ class Recruit(commands.Cog):
 
 	async def caller_authorized(self, ctx):
 		for userrole in ctx.author.roles:
-			if userrole.id == settings.SOLARMARK_RECRUITER_ROLEID:
+			if userrole.id == 998839417093488654:
 				return True
 		return False
 
