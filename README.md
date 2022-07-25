@@ -7,8 +7,7 @@ AAuth Cogs for Solarmark
 ## Features
 A collection of cogs for use by the Solarmark gaming community and it's eve online leadership.
 
-![image](https://user-images.githubusercontent.com/5394853/180701820-f73729ab-b0de-4a8c-a5cc-e59fc6d4d304.png)
-
+![image](https://user-images.githubusercontent.com/5394853/180701861-902796c6-7e01-46bc-bb50-75606287bd7f.png)
 
 ### Current cogs
 Cog |  Purpose
