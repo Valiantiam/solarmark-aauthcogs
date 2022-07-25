@@ -5,6 +5,7 @@ Creates a private thread for recruiters and recruits in your discord to manage r
 """
 # Cog Stuff
 import logging
+logger = logging.getLogger(__name__)
 import discord
 from discord.ext import commands
 
@@ -12,14 +13,14 @@ from discord.ext import commands
 from django.conf import settings
 
 # Validation Checks - These values must be defined in server settings
-if not hasattr(settings, "SOLARMARK_RECRUIT_CHANID"):
-    raise ValueError("Recruitment base channel is not defined")
-if not hasattr(settings, "SOLARMARK_RECRUIT_MSG"):
-    raise ValueError("Recruitment message is not defined")
-if not hasattr(settings, "SOLARMARK_CORP_ROLEID"):
-    raise ValueError("Recruitment role ID is not defined")
-if not hasattr(settings, "SOLARMARK_RECRUITER_ROLEID"):
-    raise ValueError("Recruitment role ID is not defined")
+#if not hasattr(settings, "SOLARMARK_RECRUIT_CHANID"):
+#    raise ValueError("Recruitment base channel is not defined")
+#if not hasattr(settings, "SOLARMARK_RECRUIT_MSG"):
+#    raise ValueError("Recruitment message is not defined")
+#if not hasattr(settings, "SOLARMARK_CORP_ROLEID"):
+#    raise ValueError("Recruitment role ID is not defined")
+#if not hasattr(settings, "SOLARMARK_RECRUITER_ROLEID"):
+
 
 class Recruit(commands.Cog):
 	"""
