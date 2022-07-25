@@ -75,9 +75,6 @@ class Recruit(commands.Cog):
 			await self.get_channel(threadinfo.id).send(messagetext)
 			await ctx.respond("Recruitment thread created!", ephemeral = True)
 
+# Set the bot up
 def setup(bot):
-    """
-    Setup the cog
-    :param bot:
-    """
     bot.add_cog(Recruit(bot))
