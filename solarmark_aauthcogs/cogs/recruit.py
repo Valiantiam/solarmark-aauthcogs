@@ -36,13 +36,13 @@ class Recruit(commands.Cog):
 				return True
 		return False
 
-	async def caller_authorized(ctx):
+	async def caller_authorized(self, ctx):
 		for userrole in ctx.author.roles:
 			if userrole.id == settings.SOLARMARK_RECRUITER_ROLEID:
 				return True
 		return False
 
-	async def target_not_in_corp(member):
+	async def target_not_in_corp(self, member):
 		for userrole in member.roles:
 			if userrole.id == settings.SOLARMARK_CORP_ROLEID:
 				return False
@@ -55,7 +55,7 @@ class Recruit(commands.Cog):
 		if not await self.target_not_in_corp(member):
 			await ctx.respond("That user is already in the corporation.", ephemeral = True)
 			return False
-		if await self.thread_exist(self, member):
+		if await self.thread_exist(member):
 			await ctx.respond("That user already has an active recruitment thread.", ephemeral = True)
 			return False
 		return True
