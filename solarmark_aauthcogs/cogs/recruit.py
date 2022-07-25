@@ -11,12 +11,14 @@ from discord.ext import commands
 # AA Contexts
 from django.conf import settings
 
-# Validation Checks - SOLARMARK_THREAD_CHANID and SOLARMARK_THREAD_MSG must be defined in server settings
+# Validation Checks - These values must be defined in server settings
 if not hasattr(settings, "SOLARMARK_RECRUIT_CHANID"):
     raise ValueError("Recruitment base channel is not defined")
 if not hasattr(settings, "SOLARMARK_RECRUIT_MSG"):
     raise ValueError("Recruitment message is not defined")
-if not hasattr(settings, "SOLARMARK_RECRUIT_ROLEID"):
+if not hasattr(settings, "SOLARMARK_CORP_ROLEID"):
+    raise ValueError("Recruitment role ID is not defined")
+if not hasattr(settings, "SOLARMARK_RECRUITER_ROLEID"):
     raise ValueError("Recruitment role ID is not defined")
 
 class Recruit(commands.Cog):
@@ -33,20 +35,20 @@ class Recruit(commands.Cog):
 				return True
 		return False
 
-	async def caller_in_corp(ctx):
+	async def caller_authorized(ctx):
 		for userrole in ctx.author.roles:
-			if userrole.id == settings.SOLARMARK_RECRUIT_ROLEID:
+			if userrole.id == settings.SOLARMARK_RECRUITER_ROLEID:
 				return True
 		return False
 
 	async def target_not_in_corp(member):
 		for userrole in member.roles:
-			if userrole.id == settings.SOLARMARK_RECRUIT_ROLEID:
+			if userrole.id == settings.SOLARMARK_CORP_ROLEID:
 				return False
 		return True
 
 	async def can_recruit(self, ctx, member):
-		if not await self.caller_in_corp(ctx):
+		if not await self.caller_authorized(ctx):
 			await ctx.respond("You do not have permission to use this command.", ephemeral = True)
 			return False
 		if not await self.target_not_in_corp(member):
