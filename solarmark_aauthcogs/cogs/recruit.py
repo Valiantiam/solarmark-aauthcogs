@@ -61,7 +61,7 @@ class Recruit(commands.Cog):
 		return True
 
 	@discord.user_command(name="Recruit for EVE")
-	async def recruit(self, ctx, member: commands.Member):
+	async def recruit(self, ctx, member: discord.Member):
 		if await self.can_recruit(self, ctx, member):
 			channel = self.get_channel(settings.SOLARMARK_RECRUIT_CHANID)
 			threadname = "RCT-" + member.name
