@@ -13,5 +13,5 @@ def register_cogs():
     """
 
     return [
-        "solarmark_aauthcogs.cogs.thread",
+        "solarmark_aauthcogs.cogs.recruit",
     ]
