@@ -31,7 +31,7 @@ class Recruit(commands.Cog):
 		self.bot = bot
 
 	async def thread_exist(self, member):
-		for thread in self.get_channel(settings.SOLARMARK_RECRUIT_CHANID).threads:
+		for thread in self.bot.get_channel(settings.SOLARMARK_RECRUIT_CHANID).threads:
 			if thread.name == "RCT-" + member.name:
 				return True
 		return False
@@ -72,7 +72,7 @@ class Recruit(commands.Cog):
 				72091276689801216
 			)
 			threadinfo = await channel.create_thread(name=threadname, auto_archive_duration=10080, type=discord.ChannelType.private_thread)
-			await self.get_channel(threadinfo.id).send(messagetext)
+			await self.bot.get_channel(threadinfo.id).send(messagetext)
 			await ctx.respond("Recruitment thread created!", ephemeral = True)
 
 # Set the bot up
