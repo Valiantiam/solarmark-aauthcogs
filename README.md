@@ -12,7 +12,7 @@ A collection of cogs for use by the Solarmark gaming community and it's eve onli
 ### Current cogs
 Cog |  Purpose
 --- | ---
-`thread.py` | Add a right-click context menu and slash command for recruiters to create a private recruitment thread, automaically bringing in the recruit and all recruiters. Also handles thread archival settings via slash command.
+`thread.py` | Add a right-click context menu and slash command for recruiters to create a private recruitment thread, automatically bringing in the recruit and all recruiters. Also handles thread archival settings via slash command.
 
 ## How to Install
 *(Assumes a docker environment and does not use correct standards for installing. Really you/me should publish this to pypi.)*
