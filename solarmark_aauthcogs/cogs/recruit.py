@@ -151,6 +151,7 @@ class Recruit(commands.Cog):
 			else:
 				await ctx.respond("Recruitment thread created!", ephemeral = True)
 
+"""
 	# Allows users to have the bot update the auto-archive setting for a thread
 	@discord.command(description = "Update thread expiration. Accepted values are 'now', '1h', '1d', '3d', '7d'.", guild_ids = [settings.SOLARMARK_GUILDID])
 	async def archive(self, ctx, when: discord.Option(str)):
@@ -178,6 +179,7 @@ class Recruit(commands.Cog):
 				case "7d":
 					await ctx.channel.edit(auto_archive_duration = 10080)
 					await ctx.respond("Thread auto-archive set to 1 week!", ephemeral = True)
+"""
 
 # Set the bot up
 def setup(bot):
