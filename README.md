@@ -12,7 +12,7 @@ A collection of cogs for use by the Solarmark gaming community and it's eve onli
 ### Current cogs
 Cog |  Purpose
 --- | ---
-`thread.py` | Add a context menu for recruiters to right click on a user and create a private recruitment thread, auotmaically bringing in the recruit and all recruiters.
+`thread.py` | Add a right-click context menu and slash command for recruiters to create a private recruitment thread, automatically bringing in the recruit and all recruiters. Also handles thread archival settings via slash command.
 
 ## How to Install
 *(Assumes a docker environment and does not use correct standards for installing. Really you/me should publish this to pypi.)*
@@ -25,7 +25,10 @@ Cog |  Purpose
 ## Settings
 Setting | Default | Description
 --- | --- | ---
+`SOLARMARK_GUILDID` | ` ` | ID of the Discord server in which the bot will be operating.
 `SOLARMARK_RECRUIT_CHANID` | ` ` | ID of the channel you want the threads created in.
-`SOLARMARK_CORP_ROLEID` | ` ` | List of roles you don't want recruited (such as those already in corp)
-`SOLARMARK_RECRUIT_MSG` | ` ` | The Message that is posted to the thread on creation. (Also handles who is invited to the thread through the use of @mentions)
-`SOLARMARK_RECRUITER_ROLEID` | ` ` | Role(s) you want to be able to use the recruit action.
+`SOLARMARK_TARGET_ROLEID` | ` ` | List of Role IDs, one of which must be present on the target to be valid for recruitment (must have visibility of SOLARMARK_RECRUIT_CHANID text channel).
+`SOLARMARK_CORP_ROLEID` | ` ` | List of Role IDs that you don't want able to be recruited (such as those already in corp).
+`SOLARMARK_RECRUITER_ROLEID` | ` ` | List of Role IDs that you want to be able to use the recruit action.
+`SOLARMARK_LEADERSHIP_USERIDS` | ` ` | List of User IDs to include in the initial thread message (and therefore be automatically pulled into each thread).
+`SOLARMARK_RECRUIT_MSG_1` | ` ` | The message that is posted to the thread on creation (also handles who is invited to the thread through the use of @mentions).
