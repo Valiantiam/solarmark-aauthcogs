@@ -123,7 +123,7 @@ class Recruit(commands.Cog):
 				member.id,
 				*settings.SOLARMARK_LEADERSHIP_USERIDS
 			)
-			threadinfo = await channel.create_thread(name = threadname, auto_archive_duration = 10080, type = discord.ChannelType.public_thread)
+			threadinfo = await channel.create_thread(name = threadname, auto_archive_duration = 10080, type = discord.ChannelType.private_thread)
 			messageinfo = await self.bot.get_channel(threadinfo.id).send(messagetext)
 			if await msgcount() > 1:
 				await messageinfo.add_reaction('\N{White Heavy Check Mark}')
@@ -142,7 +142,7 @@ class Recruit(commands.Cog):
 				member.id,
 				*settings.SOLARMARK_LEADERSHIP_USERIDS
 			)
-			threadinfo = await channel.create_thread(name = threadname, auto_archive_duration = 10080, type = discord.ChannelType.public_thread)
+			threadinfo = await channel.create_thread(name = threadname, auto_archive_duration = 10080, type = discord.ChannelType.private_thread)
 			messageinfo = await self.bot.get_channel(threadinfo.id).send(messagetext)
 			if await msgcount() > 1:
 				await messageinfo.add_reaction('\N{White Heavy Check Mark}')
