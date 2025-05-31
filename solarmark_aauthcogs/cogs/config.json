@@ -1,0 +1,26 @@
+{
+    "recruit": {
+        "roles": {
+            "SOLARMARK_GUILDID": 314875906671902720,
+            "SOLARMARK_RECRUIT_CHANID": 600408850658623498,
+            "SOLARMARK_TARGET_ROLEID": [1008268404534292500],
+            "SOLARMARK_CORP_ROLEID": [1000580854843719761],
+            "SOLARMARK_RECRUITER_ROLEID": [1000580854843719761],
+			"SOLARMARK_LEADERSHIP": [
+				{"userid": 97032350247972864, "role": "CEO"},
+				{"userid": 72091276689801216, "role": "Recruitment Director"},
+				{"userid": 97049182073786368, "role": "Recruitment Director"},
+				{"userid": 72091276689801216, "role": "Officer"},
+				{"userid": 72091276689801216, "role": "Officer"}
+			]
+        },
+        "msgs": {
+            "SOLARMARK_RECRUIT_MSG_1": "# Welcome <@{}>!\nWe are happy to have you here and explore having you join the corp! This is your private thread for moving through the recruitment process with Solarmark.\n\nThe following members of Solarmark's leadership team are here to assist you through the process and answer any questions you might have:\n\n{}\nThere are a few steps to complete before we begin official recruitment. **Please click the :white_check_mark: at the bottom of this message to begin the automated walkthrough of the below steps:**\n\n1. Create your account in AAuth & add EVE character(s).\n2. Register EVE character(s) for viewing by Solarmark leadership.\n3. Link your AAuth and Discord accounts.\n4. Fill out a short questionnaire.\n\nOnce that is done, we'll continue with general Q&A in this thread.\n\n**To get started, click the :white_check_mark: below to continue to step 1 of 4.**",
+            "SOLARMARK_RECRUIT_MSG_2": "Step 1 of 4:\n# Create your account in AAuth & add EVE character(s):\n1. Go to https://aauth.solarmark.io/, click **LOG IN with EVE Online**, and log in with your EVE account.\n2. You will be shown a list of your characters. Choose your main character from the list and click **AUTHORIZE**.\n3. On the following screen, provide a valid email and click **Register**.\n\nYou should now be on the AAuth Dashboard. If you have any additional characters that you'll be joining Solarmark with, please follow the below steps. Otherwise you can skip this part by clicking the :white_check_mark: below.\n\nTo add additional characters:\n\n1. Click **Add Character**.\n2. You should be shown a list of your characters again. Select the additional character to add and click **AUTHORIZE**.\n\nRepeat these steps for any additional characters you have.\n\nWhen done, click the :white_check_mark: below to continue to step 2 of 4.",
+            "SOLARMARK_RECRUIT_MSG_3": "Step 2 of 4:\n# Register EVE character(s) for viewing by Solarmark leadership:\n1. Click on **Member Audit** on the left-hand menu of AAuth.\n2. Use the **Register** button to add each of your characters until they're all present.\n3. Click the yellow eye button underneath all of your registered characters.\n\nIf you see the white eye icon next to each character's name, this step is done.\n\nClick the :white_check_mark: below to continue to step 3 of 4.",
+            "SOLARMARK_RECRUIT_MSG_4": "Step 3 of 4:\n# Link your AAuth and Discord accounts:\n1. Click on **Services** on the left-hand menu of AAuth.\n2. On the **Discord** row that is displayed, click the checkmark button under **Action**.\n3. If you're not already logged into Discord in your browser, you'll be asked to log in.\n4. Once logged in, you'll be presented with a screen asking you to authorize AAuth to have limited access to your Discord account. Click **Authorize**.\n\nOnce that's done, your AAuth and Discord accounts should be fully linked.\n\nClick the :white_check_mark: below to continue to step 4 of 4.",
+            "SOLARMARK_RECRUIT_MSG_5": "Step 4 of 4:\n# Fill out a short questionnaire:\n1. Click on **Applications** on the left-hand menu of AAuth.\n2. Click **Create Application** in the top right of the page.\n3. Click the **Solarmark** button in the middle of the page.\n4. Answer the questions contained in the questionnaire.\n5. Click **Submit** at the bottom of the page.\n\nWhen done, click the :white_check_mark: below to continue.",
+            "SOLARMARK_RECRUIT_MSG_6": "# Congratulations, AAuth setup is complete!\nThank you for your time! Our process moving forward will be the following:\n\n1. Q&A in this thread, answering any questions you might have for us about life in Solarmark.\n2. We will do a quick background check on the characters you added in AAuth.\n3. We will schedule a quick interview on Discord voice comms.\n4. Assuming all of the above goes well and everyone is happy with the fit, we will accept you into corp.\n\nLooking forward to getting to know each other, feel free to ask any questions and we will take turns responding as available, o7!"
+        }
+    }
+}

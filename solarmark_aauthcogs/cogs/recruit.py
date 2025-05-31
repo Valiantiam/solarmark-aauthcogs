@@ -6,10 +6,13 @@ Creates a private thread for recruiters and recruits in your discord to manage r
 # Cog Stuff
 import discord
 import re
+import json
 from discord.ext import commands
 
-# AA Contexts
-from django.conf import settings
+# Import settings from config.json, scoped down to only the settings under the "recruit" element
+with open("cogs/config.json", "r") as f:
+	settingsload = json.load(f)
+	settings = settingsload['recruit']
 
 # Validation Checks - These values must be defined in server settings
 if not hasattr(settings, "SOLARMARK_GUILDID"):
